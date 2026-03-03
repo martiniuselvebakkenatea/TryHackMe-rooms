@@ -7,22 +7,24 @@
 
 ### What is the SID of the applied policy that made the bucket public?
 
-***Run query:*** ```index=task2 eventName=PutBucketPolicy
-| stats values(requestParameters.bucketPolicy.Statement{}.Sid) as sids by userIdentity.userName```
+***Run query:*** ```index=task2 eventName=PutBucketPolicy | stats values(requestParameters.bucketPolicy.Statement{}.Sid) as sids by userIdentity.userName```
 
-***Answer:*** ```xxxx```
+***Answer:*** ```TempAccessDeniedDebug```
 
 
 ### Which IP address started the bucket scan soon after it was exposed?
 
-***Run query:*** xxxxxxxxxxxxxxx
+***Run query:*** ```index=task2 eventName=ListObjects | where eventTime > strptime("2025-12-31 17:48:12", "%Y-%m-%d %H:%M:%S") | search "userIdentity.accountId"=anonymous```
 
-***Answer:*** ```xxxx```
+***Answer:*** ```212.8.250.220```
 
 
 ### How many filenames were attempted, and which file was exfiltrated?
 #### Answer Example: 42, secrets.json
 
-***Run query:*** xxxxxxxxxxxxxxx
+***Run query:*** ```index=task2 eventName=GetObject "userIdentity.accountId"=anonymous```
 
-***Answer:*** ```xxxx```
+***Answer:*** ```53, repo.zip```
+
+
+index=task2 eventName=GetObject "userIdentity.accountId"=anonymous
