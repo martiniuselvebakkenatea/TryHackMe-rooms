@@ -26,7 +26,7 @@
 ### How many filenames were attempted, and which file was exfiltrated?
 #### Answer Example: 42, secrets.json
 
-***Run query:*** ```index=task2 eventName=GetObject "userIdentity.accountId"=anonymous```
+***Run query:*** ```index=task2 eventName=GetObject "userIdentity.accountId"=anonymous eventCategory=Data errorCode=success```
 
 ***Answer:*** ```53, repo.zip```
 
