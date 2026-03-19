@@ -1,4 +1,3 @@
-
 [Link to TryHackMe Room](https://tryhackme.com/room/monitoringawsservices "Link to room")
 
 ---
