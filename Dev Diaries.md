@@ -36,7 +36,7 @@
 
 #### Found here https://github.com/notvibecoder23/marvenly_site/commit/88baf1db29d7530a51c7bc13ae9f3c1b9a1eae25.patch
 
-***Answer:*** ```THM{g1t_h1st0ry_n3v3r_f0rg3ts}```
+***Answer:*** ```find it yourself ;)```
 
 
 
